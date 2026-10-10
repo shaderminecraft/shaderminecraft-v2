@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Lime Shader (Essence Version) - Download for Minecraft Bedrock Edition</title>
+    <meta name="description" content="Download G-Lime Shader Essence Version for Minecraft Bedrock Edition. Experience the perfect green-lime glow that makes your world vibrant and peaceful while keeping vanilla charm.">
+    <link rel="canonical" href="https://shaderminecraft.github.io/glimeshader/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shader Minecraft">
+    <meta property="og:title" content="G-Lime Shader (Essence Version) - Download for Minecraft Bedrock Edition">
+    <meta property="og:description" content="Download G-Lime Shader Essence Version for Minecraft Bedrock Edition. Experience the perfect green-lime glow that makes your world vibrant and peaceful while keeping vanilla charm.">
+    <meta property="og:url" content="https://shaderminecraft.github.io/glimeshader/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="G-Lime Shader (Essence Version) - Download for Minecraft Bedrock Edition">
+    <meta name="twitter:description" content="Download G-Lime Shader Essence Version for Minecraft Bedrock Edition. The perfect green-lime glow for your world.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "G-Lime Shader (Essence Version)",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Minecraft Bedrock Edition",
+      "url": "https://shaderminecraft.github.io/glimeshader/",
+      "description": "Download G-Lime Shader Essence Version for Minecraft Bedrock Edition. Experience the perfect green-lime glow that makes your world vibrant and peaceful while keeping vanilla charm.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg:#0a0e0a; --bg2:#0e130e; --surface:rgba(255,255,255,.045); --border:rgba(255,255,255,.09);
+            --text:#eef2ec; --muted:#a3ada0; --lime:#a3e635; --lime-dark:#65a30d; --radius:20px;
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+        h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2}
+        img{max-width:100%;display:block}
+        .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(10,14,10,.72);border-bottom:1px solid var(--border)}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+        .logo{font-family:'Space Grotesk';font-weight:700;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:10px;color:var(--text)}
+        .logo i{color:var(--lime)}
+        .nav-links{display:flex;gap:28px;list-style:none}
+        .nav-links a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+        .nav-links a:hover{color:var(--lime)}
+        .burger{display:none;background:none;border:none;color:var(--text);font-size:1.4rem;cursor:pointer}
+        .page-hero{min-height:72vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:url('../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-1.jpg') center/cover no-repeat}
+        .page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,10,.35) 0%,rgba(10,14,10,.55) 45%,rgba(10,14,10,.97) 100%)}
+        .page-hero .wrap{position:relative;z-index:2;width:100%;padding-top:140px;padding-bottom:56px}
+        .crumb{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+        .crumb a{color:var(--lime);text-decoration:none}
+        .page-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:14px}
+        .page-hero p{color:#d4dacb;max-width:640px;margin-bottom:28px;font-size:1.05rem}
+        .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:14px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer}
+        .btn-lime{background:linear-gradient(135deg,var(--lime),var(--lime-dark));color:#0c1206;box-shadow:0 8px 28px rgba(163,230,53,.28)}
+        .btn-lime:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(163,230,53,.4)}
+        section{padding:84px 0}
+        .sec-head{max-width:640px;margin:0 auto 48px;text-align:center}
+        .sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:12px}
+        .sec-head p{color:var(--muted)}
+        .kicker{color:var(--lime);font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:12px}
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+        .about-grid img{border-radius:var(--radius);border:1px solid var(--border)}
+        .about-grid h3{font-size:1.6rem;margin-bottom:14px}
+        .about-grid p{color:var(--muted);margin-bottom:14px}
+        .feat-list{list-style:none;margin-top:18px;display:grid;gap:12px}
+        .feat-list li{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 18px}
+        .feat-list i{color:var(--lime);margin-top:4px}
+        #gallery{background:var(--bg2)}
+        .gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+        .gal-grid a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--border);height:170px;cursor:zoom-in}
+        .gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+        .gal-grid a:hover img{transform:scale(1.07)}
+        .dl-box{text-align:center;background:linear-gradient(135deg,rgba(163,230,53,.08),rgba(45,212,191,.06));border:1px solid rgba(163,230,53,.25);border-radius:24px;padding:56px 32px;max-width:720px;margin:0 auto}
+        .dl-box h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:12px}
+        .dl-box p{color:var(--muted);margin-bottom:28px}
+        footer{border-top:1px solid var(--border);padding:44px 0;background:#070a07}
+        .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;max-width:1200px;margin:0 auto;padding:0 24px}
+        .foot p{color:var(--muted);font-size:.88rem}
+        .foot-links{display:flex;gap:22px}
+        .foot-links a{color:var(--muted);text-decoration:none;font-size:.88rem}
+        .foot-links a:hover{color:var(--lime)}
+        .lightbox{position:fixed;inset:0;z-index:200;background:rgba(5,8,5,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+        .lightbox.open{display:flex}
+        .lightbox img{max-width:min(1100px,94vw);max-height:88vh;border-radius:12px;border:1px solid var(--border)}
+        .lightbox .close{position:absolute;top:22px;right:28px;color:#fff;font-size:1.8rem;cursor:pointer}
+        .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+        .reveal.visible{opacity:1;transform:none}
+        @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+        @media(max-width:760px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(10,14,10,.97);flex-direction:column;padding:18px 24px 26px;gap:16px;border-bottom:1px solid var(--border)}
+            .nav-links.open{display:flex}.burger{display:block}section{padding:64px 0}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../" class="logo"><i class="fa-solid fa-cube"></i> Shader Minecraft</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#download">Download</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="wrap">
+        <div class="crumb"><a href="../">Home</a> &nbsp;/&nbsp; G-Lime Shader</div>
+        <h1>G-Lime Shader <span style="color:var(--lime)">(Essence Version)</span></h1>
+        <p>The definitive, clean version of the G-Lime shader. It gives your world that perfect green-lime glow, making everything feel more vibrant and peaceful while keeping the vanilla charm.</p>
+        <a class="btn btn-lime" href="https://direct-link.net/885163/b1XqsSVfRjsX" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download G-Lime Shader</a>
+    </div>
+</header>
+
+<section id="about">
+    <div class="wrap">
+        <div class="about-grid">
+            <img class="reveal" src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-10.jpg" alt="G-Lime Shader daylight screenshot" loading="lazy">
+            <div class="reveal">
+                <span class="kicker">About this shader</span>
+                <h3>A Fresh Glow for Every World</h3>
+                <p>G-Lime Essence bathes Minecraft in a soft green-lime atmosphere — vivid but calm, cinematic but unmistakably vanilla. From bright midday builds to quiet sunsets over the water, every scene gets that signature glow.</p>
+                <ul class="feat-list">
+                    <li><i class="fa-solid fa-check"></i><span><b>Vibrant green-lime atmosphere</b> — the shader's signature look</span></li>
+                    <li><i class="fa-solid fa-check"></i><span><b>Realistic lighting &amp; shadows</b> — soft, natural, dynamic</span></li>
+                    <li><i class="fa-solid fa-check"></i><span><b>Full day–night cycle</b> — glowing days, moody nights, golden sunsets</span></li>
+                    <li><i class="fa-solid fa-check"></i><span><b>Rain &amp; underwater effects</b> — atmosphere in every weather</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="wrap">
+        <div class="sec-head reveal">
+            <span class="kicker">Screenshots</span>
+            <h2>In-Game Gallery</h2>
+            <p>Real captures from Minecraft Bedrock running G-Lime Essence. Tap any image to view it full-size.</p>
+        </div>
+        <div class="gal-grid reveal">
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-7.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-7.jpg" alt="G-Lime day 7" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-8.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-8.jpg" alt="G-Lime day 8" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-9.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-9.jpg" alt="G-Lime day 9" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-10.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-10.jpg" alt="G-Lime day 10" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-11.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-11.jpg" alt="G-Lime day 11" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-12.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-12.jpg" alt="G-Lime day 12" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-1.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-1.jpg" alt="G-Lime v1.0 day 1" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-2.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-2.jpg" alt="G-Lime v1.0 day 2" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-3.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-3.jpg" alt="G-Lime v1.0 day 3" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-4.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-4.jpg" alt="G-Lime v1.0 day 4" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-5.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-5.jpg" alt="G-Lime v1.0 day 5" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-6.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-v1.0-day-6.jpg" alt="G-Lime v1.0 day 6" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-1.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-1.jpg" alt="G-Lime sunset 1" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-2.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-2.jpg" alt="G-Lime sunset 2" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-3.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-3.jpg" alt="G-Lime sunset 3" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-4.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-4.jpg" alt="G-Lime sunset 4" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-5.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-sunset-5.jpg" alt="G-Lime sunset 5" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-night-1.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-night-1.jpg" alt="G-Lime night 1" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-night-2.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-night-2.jpg" alt="G-Lime night 2" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-night-3.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-night-3.jpg" alt="G-Lime night 3" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-underwater-1.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-underwater-1.jpg" alt="G-Lime underwater 1" loading="lazy"></a>
+            <a href="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-underwater-2.jpg"><img src="../https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-underwater-2.jpg" alt="G-Lime underwater 2" loading="lazy"></a>
+        </div>
+    </div>
+</section>
+
+<section id="download">
+    <div class="wrap">
+        <div class="dl-box reveal">
+            <span class="kicker">Free download</span>
+            <h2>Get G-Lime Shader</h2>
+            <p>Download the <b>.mcpack</b> file, tap it to import into Minecraft Bedrock, then activate it under Settings → Resource Packs.</p>
+            <a class="btn btn-lime" href="https://direct-link.net/885163/b1XqsSVfRjsX" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download .mcpack</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="foot">
+        <p>© 2026 Shader Minecraft. Free shaders for Minecraft Bedrock / Pocket Edition.</p>
+        <div class="foot-links">
+            <a href="../">Home</a>
+            <a href="../lbtshader/">LBT Shader</a>
+        </div>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+    <img id="lightboxImg" src="" alt="Screenshot enlarged">
+</div>
+
+<script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gal-grid a').forEach(a => {
+        a.addEventListener('click', ev => {
+            ev.preventDefault();
+            lbImg.src = a.href;
+            lb.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    const closeLb = () => { lb.classList.remove('open'); document.body.style.overflow = ''; };
+    lb.addEventListener('click', closeLb);
+    document.addEventListener('keydown', ev => { if (ev.key === 'Escape') closeLb(); });
+</script>
+</body>
+</html>
