@@ -21,7 +21,6 @@
     <style>
         :root {
             --bg: #0a0e0a;
-            --bg2: #0e130e;
             --surface: rgba(255,255,255,0.045);
             --border: rgba(255,255,255,0.09);
             --text: #eef2ec;
@@ -29,122 +28,91 @@
             --lime: #a3e635;
             --lime-dark: #65a30d;
             --amber: #fbbf24;
-            --teal: #2dd4bf;
-            --radius: 20px;
+            --amber-dark: #d97706;
+            --radius: 22px;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
-        body { background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.65; overflow-x:hidden; }
-        h1,h2,h3,h4 { font-family:'Space Grotesk',sans-serif; line-height:1.2; }
+        body { background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.6; overflow-x:hidden; }
+        h1,h2,h3 { font-family:'Space Grotesk',sans-serif; line-height:1.15; }
         img { max-width:100%; display:block; }
         a { color:inherit; }
-        .wrap { max-width:1200px; margin:0 auto; padding:0 24px; }
+        .wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
 
-        /* ---------- nav ---------- */
+        /* ---------- slim nav ---------- */
         nav { position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-              background:rgba(10,14,10,0.72); border-bottom:1px solid var(--border); }
-        .nav-inner { max-width:1200px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
-        .logo { font-family:'Space Grotesk'; font-weight:700; font-size:1.25rem; text-decoration:none; display:flex; align-items:center; gap:10px; }
+              background:rgba(10,14,10,0.7); border-bottom:1px solid var(--border); }
+        .nav-inner { max-width:1080px; margin:0 auto; padding:13px 28px; display:flex; align-items:center; justify-content:space-between; }
+        .logo { font-family:'Space Grotesk'; font-weight:700; font-size:1.15rem; text-decoration:none; display:flex; align-items:center; gap:10px; }
         .logo i { color:var(--lime); }
-        .nav-links { display:flex; gap:28px; list-style:none; }
-        .nav-links a { text-decoration:none; color:var(--muted); font-weight:500; font-size:.95rem; transition:color .2s; }
-        .nav-links a:hover { color:var(--lime); }
-        .burger { display:none; background:none; border:none; color:var(--text); font-size:1.4rem; cursor:pointer; }
+        .nav-links { display:flex; gap:30px; list-style:none; }
+        .nav-links a { text-decoration:none; color:var(--muted); font-weight:500; font-size:.92rem; transition:color .2s; }
+        .nav-links a:hover { color:var(--text); }
+        .burger { display:none; background:none; border:none; color:var(--text); font-size:1.3rem; cursor:pointer; }
 
         /* ---------- hero ---------- */
-        .hero { min-height:100vh; display:flex; align-items:center; position:relative; overflow:hidden;
+        .hero { min-height:94vh; display:flex; align-items:center; position:relative; overflow:hidden;
                 background:url('https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-day-9.jpg') center/cover no-repeat; }
         .hero::before { content:''; position:absolute; inset:0;
-            background:linear-gradient(180deg, rgba(10,14,10,0.55) 0%, rgba(10,14,10,0.35) 40%, rgba(10,14,10,0.96) 100%),
-                       linear-gradient(100deg, rgba(10,14,10,0.85) 0%, rgba(10,14,10,0.25) 60%, rgba(10,14,10,0.1) 100%); }
-        .hero-inner { position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:140px 24px 80px; width:100%; }
-        .eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:.82rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
-                   color:var(--lime); background:rgba(163,230,53,0.1); border:1px solid rgba(163,230,53,0.3);
-                   padding:8px 16px; border-radius:100px; margin-bottom:22px; }
-        .hero h1 { font-size:clamp(2.6rem, 6vw, 4.6rem); font-weight:700; max-width:720px; margin-bottom:20px; }
-        .hero h1 .grad { background:linear-gradient(92deg, var(--lime), var(--teal)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-        .hero p { font-size:1.12rem; color:#d4dacb; max-width:600px; margin-bottom:34px; }
-        .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 30px; border-radius:14px; font-weight:600; font-size:1rem;
+            background:linear-gradient(180deg, rgba(10,14,10,0.62) 0%, rgba(10,14,10,0.42) 45%, rgba(10,14,10,0.97) 100%); }
+        .hero-inner { position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:130px 28px 70px; width:100%; }
+        .hero h1 { font-size:clamp(2.4rem, 5.4vw, 4rem); font-weight:700; max-width:640px; margin-bottom:18px; letter-spacing:-0.01em; }
+        .hero h1 .glow { color:var(--lime); }
+        .hero p { font-size:1.08rem; color:#cfd6c9; max-width:520px; margin-bottom:36px; }
+        .btn { display:inline-flex; align-items:center; gap:10px; padding:15px 34px; border-radius:16px; font-weight:600; font-size:1rem;
                text-decoration:none; transition:transform .2s, box-shadow .2s; cursor:pointer; border:none; }
-        .btn-lime { background:linear-gradient(135deg, var(--lime), var(--lime-dark)); color:#0c1206; box-shadow:0 8px 28px rgba(163,230,53,0.28); }
-        .btn-lime:hover { transform:translateY(-2px); box-shadow:0 12px 34px rgba(163,230,53,0.4); }
-        .btn-ghost { background:var(--surface); color:var(--text); border:1px solid var(--border); backdrop-filter:blur(8px); margin-left:12px; }
-        .btn-ghost:hover { border-color:var(--lime); color:var(--lime); }
-        .hero-stats { display:flex; gap:44px; margin-top:56px; flex-wrap:wrap; }
-        .hstat b { font-family:'Space Grotesk'; font-size:1.7rem; color:var(--lime); display:block; }
-        .hstat span { color:var(--muted); font-size:.88rem; }
+        .btn-lime { background:linear-gradient(135deg, var(--lime), var(--lime-dark)); color:#0c1206; box-shadow:0 8px 28px rgba(163,230,53,0.25); }
+        .btn-lime:hover { transform:translateY(-2px); box-shadow:0 12px 34px rgba(163,230,53,0.38); }
 
-        /* ---------- sections ---------- */
-        section { padding:96px 0; }
-        .sec-head { text-align:center; max-width:640px; margin:0 auto 54px; }
-        .sec-head h2 { font-size:clamp(1.9rem,4vw,2.7rem); margin-bottom:14px; }
-        .sec-head p { color:var(--muted); }
-        .sec-head .kicker { color:var(--lime); font-weight:600; font-size:.82rem; letter-spacing:.16em; text-transform:uppercase; display:block; margin-bottom:12px; }
-
-        /* ---------- shader cards ---------- */
-        .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:28px; }
+        /* ---------- packs ---------- */
+        #packs { padding:110px 0 130px; }
+        .packs-head { text-align:center; margin-bottom:56px; }
+        .packs-head h2 { font-size:clamp(1.7rem, 3.4vw, 2.3rem); font-weight:700; letter-spacing:-0.01em; }
+        .cards { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
         .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
-                backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); transition:transform .3s, border-color .3s, box-shadow .3s; }
-        .card:hover { transform:translateY(-8px); border-color:rgba(163,230,53,0.45); box-shadow:0 24px 60px rgba(0,0,0,0.5); }
-        .card-img { height:230px; overflow:hidden; position:relative; }
-        .card-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
-        .card:hover .card-img img { transform:scale(1.06); }
-        .card-body { padding:28px; }
-        .card-tag { font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--lime);
-                    background:rgba(163,230,53,0.1); padding:6px 12px; border-radius:100px; display:inline-block; margin-bottom:14px; }
-        .card-tag.amber { color:var(--amber); background:rgba(251,191,36,0.1); }
-        .card h3 { font-size:1.5rem; margin-bottom:10px; }
-        .card p { color:var(--muted); font-size:.96rem; margin-bottom:22px; }
-        .card-link { display:inline-flex; align-items:center; gap:8px; color:var(--lime); font-weight:600; text-decoration:none; font-size:.98rem; }
-        .card-link i { transition:transform .25s; }
-        .card-link:hover i { transform:translateX(5px); }
+                transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
+        .card:hover { transform:translateY(-8px); box-shadow:0 30px 70px rgba(0,0,0,0.55); }
+        .card.lime:hover { border-color:rgba(163,230,53,0.45); }
+        .card.amber:hover { border-color:rgba(251,191,36,0.45); }
+        .card-img { height:300px; overflow:hidden; }
+        .card-img img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+        .card:hover .card-img img { transform:scale(1.05); }
+        .card-body { padding:36px 34px 38px; }
+        .card-body h3 { font-size:1.65rem; margin-bottom:10px; }
+        .card-body > p { color:var(--muted); font-size:1rem; margin-bottom:28px; }
+        .card-actions { display:flex; align-items:center; gap:26px; flex-wrap:wrap; }
+        .dl { display:inline-flex; align-items:center; gap:9px; padding:12px 26px; border-radius:13px; font-weight:600; font-size:.95rem; text-decoration:none; transition:transform .2s, box-shadow .2s; }
+        .card.lime .dl { background:linear-gradient(135deg, var(--lime), var(--lime-dark)); color:#0c1206; box-shadow:0 6px 22px rgba(163,230,53,0.22); }
+        .card.amber .dl { background:linear-gradient(135deg, var(--amber), var(--amber-dark)); color:#1a1206; box-shadow:0 6px 22px rgba(251,191,36,0.22); }
+        .dl:hover { transform:translateY(-2px); }
+        .more { display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:.95rem; text-decoration:none; }
+        .card.lime .more { color:var(--lime); }
+        .card.amber .more { color:var(--amber); }
+        .more i { transition:transform .25s; }
+        .more:hover i { transform:translateX(5px); }
 
-        /* ---------- features ---------- */
-        #features { background:var(--bg2); }
-        .feat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; }
-        .feat { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:30px 26px; transition:border-color .3s, transform .3s; }
-        .feat:hover { border-color:rgba(163,230,53,0.4); transform:translateY(-4px); }
-        .feat i { font-size:1.7rem; color:var(--lime); margin-bottom:16px; display:block; }
-        .feat h4 { font-size:1.1rem; margin-bottom:8px; }
-        .feat p { color:var(--muted); font-size:.92rem; }
-
-        /* ---------- install steps ---------- */
-        .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; counter-reset:step; }
-        .step { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:30px 26px; position:relative; }
-        .step::before { counter-increment:step; content:counter(step); position:absolute; top:-20px; left:26px; width:42px; height:42px;
-            border-radius:50%; background:linear-gradient(135deg,var(--lime),var(--lime-dark)); color:#0c1206;
-            font-family:'Space Grotesk'; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:1.15rem; }
-        .step h4 { margin:8px 0 8px; font-size:1.08rem; }
-        .step p { color:var(--muted); font-size:.92rem; }
-        .step code { background:rgba(163,230,53,0.12); color:var(--lime); padding:2px 8px; border-radius:6px; font-size:.88em; }
-
-        /* ---------- creators ---------- */
-        #creators { background:var(--bg2); }
-        .creator-grid { display:flex; gap:28px; justify-content:center; flex-wrap:wrap; }
-        .creator { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:36px 44px; text-align:center; min-width:260px; }
-        .creator img { width:110px; height:110px; border-radius:50%; object-fit:cover; margin:0 auto 18px; border:3px solid rgba(163,230,53,0.5); }
-        .creator h4 { font-size:1.2rem; margin-bottom:4px; }
-        .creator span { color:var(--muted); font-size:.9rem; }
-
-        /* ---------- footer ---------- */
-        footer { border-top:1px solid var(--border); padding:44px 0; background:#070a07; }
-        .foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px; max-width:1200px; margin:0 auto; padding:0 24px; }
-        .foot p { color:var(--muted); font-size:.88rem; }
+        /* ---------- minimal footer ---------- */
+        footer { border-top:1px solid var(--border); padding:30px 0; }
+        .foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; max-width:1080px; margin:0 auto; padding:0 28px; }
+        .foot p { color:var(--muted); font-size:.85rem; }
         .foot-links { display:flex; gap:22px; }
-        .foot-links a { color:var(--muted); text-decoration:none; font-size:.88rem; }
-        .foot-links a:hover { color:var(--lime); }
+        .foot-links a { color:var(--muted); text-decoration:none; font-size:.85rem; transition:color .2s; }
+        .foot-links a:hover { color:var(--text); }
 
-        /* ---------- reveal animation ---------- */
-        .reveal { opacity:0; transform:translateY(34px); transition:opacity .7s ease, transform .7s ease; }
+        /* ---------- reveal ---------- */
+        .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
         .reveal.visible { opacity:1; transform:none; }
 
+        @media (max-width:820px) {
+            .cards { grid-template-columns:1fr; }
+            .card-img { height:240px; }
+        }
         @media (max-width:760px) {
             .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(10,14,10,0.97);
-                         flex-direction:column; padding:18px 24px 26px; gap:16px; border-bottom:1px solid var(--border); }
+                         flex-direction:column; padding:18px 28px 26px; gap:16px; border-bottom:1px solid var(--border); }
             .nav-links.open { display:flex; }
             .burger { display:block; }
-            .btn-ghost { margin-left:0; margin-top:12px; }
-            section { padding:68px 0; }
+            #packs { padding:80px 0 90px; }
         }
     </style>
 </head>
@@ -154,10 +122,9 @@
     <div class="nav-inner">
         <a href="./" class="logo"><i class="fa-solid fa-cube"></i> Shader Minecraft</a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#shaders">Shaders</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#install">Install Guide</a></li>
-            <li><a href="#creators">Creators</a></li>
+            <li><a href="#packs">Packs</a></li>
+            <li><a href="glimeshader/">G-Lime</a></li>
+            <li><a href="lbtshader/">LBT</a></li>
         </ul>
         <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -165,122 +132,60 @@
 
 <header class="hero">
     <div class="hero-inner">
-        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Minecraft Bedrock &amp; PE Shaders</span>
-        <h1>Bring Your Minecraft World <span class="grad">to Life</span></h1>
-        <p>Hand-picked, high-quality shaders for Minecraft Bedrock and Pocket Edition. Stunning lighting, vibrant colors, and buttery-smooth atmospheres — free to download.</p>
-        <div>
-            <a href="#shaders" class="btn btn-lime"><i class="fa-solid fa-wand-magic-sparkles"></i> Browse Shaders</a>
-            <a href="#install" class="btn btn-ghost"><i class="fa-solid fa-circle-down"></i> How to Install</a>
-        </div>
-        <div class="hero-stats">
-            <div class="hstat"><b>2</b><span>Curated shaders</span></div>
-            <div class="hstat"><b>30+</b><span>In-game screenshots</span></div>
-            <div class="hstat"><b>100%</b><span>Free download</span></div>
-        </div>
+        <h1>Your world, <span class="glow">beautifully lit.</span></h1>
+        <p>Hand-picked shaders for Minecraft Bedrock &amp; Pocket Edition — free to download.</p>
+        <a href="#packs" class="btn btn-lime"><i class="fa-solid fa-layer-group"></i> Explore the Packs</a>
     </div>
 </header>
 
-<section id="shaders">
+<section id="packs">
     <div class="wrap">
-        <div class="sec-head reveal">
-            <span class="kicker">Catalog</span>
-            <h2>Choose Your Shader</h2>
-            <p>Every shader is tested on Minecraft Bedrock / Pocket Edition and ready to import in seconds.</p>
+        <div class="packs-head reveal">
+            <h2>Shader Packs</h2>
         </div>
         <div class="cards">
-            <article class="card reveal">
-                <div class="card-img"><img src="https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-thumbnail.jpg" alt="G-Lime Shader screenshot" loading="lazy"></div>
+            <article class="card lime reveal">
+                <div class="card-img"><img src="https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/g-lime-essence/screenshots/glime-essence-thumbnail.jpg" alt="G-Lime Shader" loading="lazy"></div>
                 <div class="card-body">
-                    <span class="card-tag">Essence Version</span>
                     <h3>G-Lime Shader</h3>
-                    <p>The definitive, clean version of the G-Lime shader. It gives your world that perfect green-lime glow, making everything feel more vibrant and peaceful while keeping the vanilla charm.</p>
-                    <a class="card-link" href="glimeshader/">See More about G-Lime Shader <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>A soft green-lime glow that makes your world vibrant and peaceful — vanilla charm kept.</p>
+                    <div class="card-actions">
+                        <a class="dl" href="https://direct-link.net/885163/b1XqsSVfRjsX" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+                        <a class="more" href="glimeshader/">See More about G-Lime Shader <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </article>
-            <article class="card reveal">
-                <div class="card-img"><img src="https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/lbt-shader/screenshots/lbt-shader-thumbnail.jpg" alt="LBT Shader screenshot" loading="lazy"></div>
+            <article class="card amber reveal">
+                <div class="card-img"><img src="https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/projects/lbt-shader/screenshots/lbt-shader-thumbnail.jpg" alt="LBT Shader" loading="lazy"></div>
                 <div class="card-body">
-                    <span class="card-tag amber">Cinematic</span>
                     <h3>LBT Shader</h3>
-                    <p>Transform your world with stunning visual effects, realistic lighting, and enhanced colors for day, night, rain, and more. A cinematic upgrade for every biome.</p>
-                    <a class="card-link" href="lbtshader/">See More about LBT Shader <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Cinematic lighting and rich colors for day, night, rain — and every dimension.</p>
+                    <div class="card-actions">
+                        <a class="dl" href="https://link-center.net/218099/LBTShaderwithWave" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+                        <a class="more" href="lbtshader/">See More about LBT Shader <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </article>
-        </div>
-    </div>
-</section>
-
-<section id="features">
-    <div class="wrap">
-        <div class="sec-head reveal">
-            <span class="kicker">Why us</span>
-            <h2>Built for Beautiful Worlds</h2>
-            <p>Every shader on this site is chosen for visual quality, performance, and that vanilla-friendly feel.</p>
-        </div>
-        <div class="feat-grid">
-            <div class="feat reveal"><i class="fa-solid fa-sun"></i><h4>Realistic Lighting</h4><p>Dynamic sun, soft shadows, and glowing atmospheres that react to the time of day.</p></div>
-            <div class="feat reveal"><i class="fa-solid fa-cloud-rain"></i><h4>Day, Night &amp; Weather</h4><p>Beautiful skies, rain effects, sunsets, and starry nights — every moment looks alive.</p></div>
-            <div class="feat reveal"><i class="fa-solid fa-leaf"></i><h4>Vanilla Charm Kept</h4><p>Enhanced visuals without losing the classic Minecraft look you love.</p></div>
-            <div class="feat reveal"><i class="fa-solid fa-bolt"></i><h4>Easy to Install</h4><p>One <code>.mcpack</code> file. Download, tap, activate — done in under a minute.</p></div>
-        </div>
-    </div>
-</section>
-
-<section id="install">
-    <div class="wrap">
-        <div class="sec-head reveal">
-            <span class="kicker">Guide</span>
-            <h2>Install a Shader in 4 Steps</h2>
-            <p>Works on Minecraft Bedrock and Pocket Edition (Android / iOS / Windows).</p>
-        </div>
-        <div class="steps">
-            <div class="step reveal"><h4>Download the file</h4><p>Tap the Download button on any shader page to get the <code>.mcpack</code> file.</p></div>
-            <div class="step reveal"><h4>Open it</h4><p>Tap the downloaded file — Minecraft will open automatically and start importing.</p></div>
-            <div class="step reveal"><h4>Wait for import</h4><p>You'll see an "Import completed" toast once the pack is installed.</p></div>
-            <div class="step reveal"><h4>Activate it</h4><p>Go to <b>Settings → Resource Packs → My Packs</b>, select the shader, and tap Activate.</p></div>
-        </div>
-    </div>
-</section>
-
-<section id="creators">
-    <div class="wrap">
-        <div class="sec-head reveal">
-            <span class="kicker">Team</span>
-            <h2>Meet the Creators</h2>
-            <p>The people behind Shader Minecraft.</p>
-        </div>
-        <div class="creator-grid">
-            <div class="creator reveal">
-                <img src="https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/creator's%20profile/creator-dirgaas.webp" alt="dirgaas">
-                <h4>dirgaas</h4><span>Founder &amp; Developer</span>
-            </div>
-            <div class="creator reveal">
-                <img src="https://raw.githubusercontent.com/shaderminecraft/shaderminecraft/main/creator's%20profile/creator-anugrahbodi123.webp" alt="anugrahbodi123">
-                <h4>anugrahbodi123</h4><span>Contributor</span>
-            </div>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="foot">
-        <p>© 2026 Shader Minecraft. Free shaders for Minecraft Bedrock / Pocket Edition.</p>
+        <p>© 2026 Shader Minecraft · Free shaders for Minecraft Bedrock / PE.</p>
         <div class="foot-links">
-            <a href="glimeshader/">G-Lime Shader</a>
-            <a href="lbtshader/">LBT Shader</a>
-            <a href="#install">Install Guide</a>
+            <a href="glimeshader/">G-Lime</a>
+            <a href="lbtshader/">LBT</a>
         </div>
     </div>
 </footer>
 
 <script>
-    // mobile nav
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
     burger.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    // reveal on scroll
     const io = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
